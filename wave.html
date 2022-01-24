@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .wave {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        transform: translate3d(0, 0, 0);
+      }
+
+      .w1 {
+        background-image: url(w1.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 604px; */
+        height: 55.94%;
+        animation: waveU 100s cubic-bezier(0.36, 0.45, 0.63, 0.53) alternate
+          infinite;
+      }
+      .w2 {
+        background-image: url(w2.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 530px; */
+        height: 49%;
+        animation: waveU 100s cubic-bezier(0.36, 0.45, 0.63, 0.53) alternate
+          infinite;
+      }
+      .w3 {
+        background-image: url(w3.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 433px; */
+        height: 40%;
+        animation: waveU 100s cubic-bezier(0.36, 0.45, 0.63, 0.53) alternate
+          infinite;
+      }
+      .w4 {
+        background-image: url(w4.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 347px; */
+        height: 32%;
+      }
+      .w5 {
+        background-image: url(w5.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 270px; */
+        height: 25%;
+      }
+      .w6 {
+        background-image: url(w6.svg);
+        background-repeat: repeat-x;
+        background-size: cover;
+        background-position: top;
+        /* height: 166px; */
+        height: 16%;
+      }
+
+      @keyframes waveU {
+        0% {
+          background-position-x: 0px;
+        }
+        100% {
+          background-position-x: -1600px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <div class="wave w1"></div>
+
+      <div class="wave w2"></div>
+
+      <div class="wave w3"></div>
+
+      <div class="wave w4"></div>
+
+      <div class="wave w5"></div>
+
+      <div class="wave w6"></div>
+    </div>
+  </body>
+</html>
